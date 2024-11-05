@@ -48,19 +48,25 @@ This project utilizes the following tools and technologies for data analysis and
 4. Practice Exercises and Real-World Examples
 - Each topic is accompanied by exercises and real-world examples (e.g., personal budget sheet, sales report). Users are encouraged to practice with these examples to reinforce their skills.
 
-#### Data visualization
-- The basic Excel functions used in calculating for this datasheet are: SUM, AVERAGE, MAX, MIN COUNT,LARGE,SMALL
-- The calculations are shown in the worksheet
-  
+----
+#### Number functions in  ExceL
+-Basic Numeric Functions
+  - SUM: Adds a range of numbers.: =SUM(A1:A10) sums values from A1 to A10.
+  - AVERAGE: Calculates the mean of a range.: =AVERAGE(A1:A10) returns the average.
+     MIN and MAX: Finds the minimum or maximum value in a range.: =MIN(A1:A10) and =MAX(A1:A10)
+  - COUNT: Counts the number of cells with numbers: =COUNT(A1:A10) returns the count of numeric cells,
+##### EXAMPLE
 ![Basic Excel functions](https://github.com/user-attachments/assets/7d6b7423-a99a-4698-a4dc-b0424fabf529)
 
----
-- The Excel functions used in calculating for this datasheet is a conditional function: AVERAGEIF, SUMIF, MAXIF, MINIF, COUNTIF.
-- The calculations are shown in the worksheet
-  
+- Conditional functions
+   - The Excel functions used in calculating for this datasheet is a conditional function: AVERAGEIF, SUMIF, MAXIF, MINIF, COUNTIF.
+   - The calculations are shown in the worksheet
+  #####  EXAMPLE 
 ![Basic excel function2](https://github.com/user-attachments/assets/a957c2da-65a9-4c38-9b6e-bde81afb9936)
 
-#### Text cleaning in excel
+----
+#### Text cleaning in Excel
+
 1. Basic Text Cleaning Functions
 - TRIM(text): Removes all extra spaces from a string, except single spaces between words.
 - CLEAN(text): Removes all non-printable characters from a text string.
@@ -68,13 +74,19 @@ This project utilizes the following tools and technologies for data analysis and
    - LOWER(text): Converts all characters to lowercase.
    - UPPER(text): Converts all characters to uppercase.
    - PROPER(text): Capitalizes the first letter of each word in a text string.
-     
+##### EXAMPLE
+![Basic cleaning functions](https://github.com/user-attachments/assets/c789a33c-38df-4c73-9a95-80b10a467953)
+
+----
  2. Text Extraction Functions
 - LEFT(text, num_chars): Extracts a specified number of characters from the left side of a string.
 - RIGHT(text, num_chars): Extracts a specified number of characters from the right side of a string.
 - MID(text, start_num, num_chars): Extracts a specified number of characters from the middle of a string, starting at a given position.
 - LEN(text): Returns the length (number of characters) of a text string.
-  
+ ##### EXAMPLE
+ ![Text extraction](https://github.com/user-attachments/assets/1b554027-4166-43f7-a477-93fbe841edb1)
+
+----
  3. Finding and Replacing Text
 - FIND(find_text, within_text, [start_num]): Finds the starting position of one text string within another. Case-sensitive.
 - SEARCH(find_text, within_text, [start_num]): Similar to FIND, but case-insensitive.
