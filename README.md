@@ -47,3 +47,17 @@ This project utilizes the following tools and technologies for data analysis and
 - Using Sparklines: Embed small visualizations within cells to show trends and comparisons.
 4. Practice Exercises and Real-World Examples
 - Each topic is accompanied by exercises and real-world examples (e.g., personal budget sheet, sales report). Users are encouraged to practice with these examples to reinforce their skills.
+
+#### Data visualization
+- The basic Excel functions used in calculating for this datasheet are: SUM, AVERAGE, MAX, MIN COUNT,LARGE,SMALL
+- The calculations are shown in the worksheet
+  
+![Basic Excel functions](https://github.com/user-attachments/assets/7d6b7423-a99a-4698-a4dc-b0424fabf529)
+
+---
+- The Excel functions used in calculating for this datasheet is a conditional function: AVERAGEIF, SUMIF, MAXIF, MINIF, COUNTIF.
+- The calculations are shown in the worksheet
+  
+![Basic excel function2](https://github.com/user-attachments/assets/a957c2da-65a9-4c38-9b6e-bde81afb9936)
+
+
