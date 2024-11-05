@@ -1,8 +1,19 @@
 # LITA_Class_Documentation
 This is where i documented my first project while learning Data Analysis with the incubator Hub
 
+---
 ### Project Overview
+In this project, we explore data analysis methodologies using Microsoft Excel, SQL, and Power BI. These tools are widely used for data manipulation, query-based insights, and powerful visualizations. The goal of this project is to showcase an end-to-end data analysis workflow that includes data exploration, transformation, and visualization. By the end of the project, we will produce interactive dashboards and reports to present actionable insights for decision-making.
 
+---
+### Key Objectives
+1. Data Exploration and Transformation with Excel: Use Excel to clean, explore, and summarize the data. This includes using pivot tables, basic functions, and charts to identify initial trends and patterns.
+
+2. Data Querying with SQL: Employ SQL queries to extract meaningful insights from the dataset. SQL allows for efficient data manipulation and aggregation, helping to answer key business questions by breaking down data by categories, dates, regions, and other dimensions.
+
+3. Data Visualization with Power BI: Create interactive dashboards using Power BI to visualize insights discovered in Excel and SQL. The dashboard will allow for real-time interaction, drill-downs, and filtering to uncover trends, performance indicators, and areas of interest.
+
+---
 ### Tools Used
 This project utilizes the following tools and technologies for data analysis and visualization:
 - Microsoft Excel: For initial data exploration, pivot tables, and calculations (e.g., average subscription duration, subscription patterns).
@@ -10,8 +21,29 @@ This project utilizes the following tools and technologies for data analysis and
 - Power BI: For creating interactive dashboards to visualize customer segments, cancellations, and subscription trends.
 - Github for Portfolio Building
 
+---
 ### Microsoft Excel 
-- Data cleaning
-    - Texting cleaning
-- Data entry
-- Excel functions
+#### Key Topics Covered
+1. Excel Basics
+   - Navigating the Interface: Understand Excel’s toolbar, navigation, and keyboard shortcuts.
+   - Data Entry and Cell Formatting: Learn to input data, adjust cell sizes, apply styles, and use basic data formatting tools.
+2. Essential Excel Functions
+   - Explore and practice the following categories of Excel functions:
+- Mathematical Functions:
+   - SUM, AVERAGE, MIN, MAX, and ROUND for basic arithmetic and data aggregation.
+- Text Functions:
+   - CONCATENATE, UPPER, LOWER, TRIM, and LEFT/RIGHT to manipulate text data.
+- Logical Functions:
+   - IF, AND, OR, and NOT for conditional logic.
+- Lookup Functions:
+   - VLOOKUP, HLOOKUP, INDEX, and MATCH for searching and matching data across tables.
+- Date and Time Functions:
+   - TODAY, NOW, YEAR, MONTH, and DAY for managing date and time values.
+- Statistical Functions:
+   - COUNT, COUNTA, COUNTIF, SUMIF, and AVERAGEIF for data analysis and counting based on criteria.
+3. Data Visualization in Excel
+- Creating Charts: Step-by-step guide to creating bar charts, line charts, pie charts, and scatter plots.
+- Formatting and Customization: Adjust chart colors, labels, and legends to enhance readability and visual appeal.
+- Using Sparklines: Embed small visualizations within cells to show trends and comparisons.
+4. Practice Exercises and Real-World Examples
+- Each topic is accompanied by exercises and real-world examples (e.g., personal budget sheet, sales report). Users are encouraged to practice with these examples to reinforce their skills.
