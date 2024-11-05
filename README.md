@@ -60,4 +60,32 @@ This project utilizes the following tools and technologies for data analysis and
   
 ![Basic excel function2](https://github.com/user-attachments/assets/a957c2da-65a9-4c38-9b6e-bde81afb9936)
 
+#### Text cleaning in excel
+1. Basic Text Cleaning Functions
+- TRIM(text): Removes all extra spaces from a string, except single spaces between words.
+- CLEAN(text): Removes all non-printable characters from a text string.
+- LOWER(text), UPPER(text), and PROPER(text):
+   - LOWER(text): Converts all characters to lowercase.
+   - UPPER(text): Converts all characters to uppercase.
+   - PROPER(text): Capitalizes the first letter of each word in a text string.
+     
+ 2. Text Extraction Functions
+- LEFT(text, num_chars): Extracts a specified number of characters from the left side of a string.
+- RIGHT(text, num_chars): Extracts a specified number of characters from the right side of a string.
+- MID(text, start_num, num_chars): Extracts a specified number of characters from the middle of a string, starting at a given position.
+- LEN(text): Returns the length (number of characters) of a text string.
+  
+ 3. Finding and Replacing Text
+- FIND(find_text, within_text, [start_num]): Finds the starting position of one text string within another. Case-sensitive.
+- SEARCH(find_text, within_text, [start_num]): Similar to FIND, but case-insensitive.
+   REPLACE(old_text, start_num, num_chars, new_text): Replaces part of a text string with a different text string, based on a position and length.
+- SUBSTITUTE(text, old_text, new_text, [instance_num]): Replaces occurrences of specific text within a string.
+  
+4. Text Concatenation
+- & Operator: Joins (concatenates) multiple text strings.
+- TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...): Joins multiple text values with a specified delimiter.
+- CONCATENATE(text1, [text2], ...): Joins text from different cells or strings. (Note: In newer versions of Excel, CONCATENATE is replaced by CONCAT).
 
+5. Conditional Text Extraction
+- IF: Conditional functions to clean and handle errors.
+- LEFT, RIGHT, MID with SEARCH: Use in combination to extract variable-length text based on specific markers.
