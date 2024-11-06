@@ -1,5 +1,5 @@
 # LITA_Class_Documentation
-This is where i documented my first project while learning Data Analysis with the incubator Hub
+This is where I documented my first project while learning Data Analysis with the incubator Hub
 
 ---
 ### Project Overview
@@ -49,7 +49,7 @@ This project utilizes the following tools and technologies for data analysis and
 - Each topic is accompanied by exercises and real-world examples (e.g., personal budget sheet, sales report). Users are encouraged to practice with these examples to reinforce their skills.
 
 ----
-#### Number functions in  ExceL
+#### Number functions in Excel
 -Basic Numeric Functions
   - SUM: Adds a range of numbers.: =SUM(A1:A10) sums values from A1 to A10.
   - AVERAGE: Calculates the mean of a range.: =AVERAGE(A1:A10) returns the average.
@@ -71,10 +71,17 @@ This project utilizes the following tools and technologies for data analysis and
 - TRIM(text): Removes all extra spaces from a string, except single spaces between words.
 - CLEAN(text): Removes all non-printable characters from a text string.
 - LOWER(text), UPPER(text), and PROPER(text):
-   - LOWER(text): Converts all characters to lowercase.
-   - UPPER(text): Converts all characters to uppercase.
+   - LOWER(text): Converts all characters to lowercase. 
+   - UPPER(text): Converts all characters to uppercase. 
    - PROPER(text): Capitalizes the first letter of each word in a text string.
 ##### EXAMPLE
+- In this spreadsheet, PROPER, LOWER, UPPER, TRIM, and PROPER TRIM Function was used in the name extraction
+    - =PROPER(E6)
+    - =LOWER(E6)
+    - =UPPER(E6)
+    - =TRIM(B6)
+    - =PROPER(TRIM(B6))
+      
 ![Basic cleaning functions](https://github.com/user-attachments/assets/c789a33c-38df-4c73-9a95-80b10a467953)
 
 ----
@@ -83,8 +90,19 @@ This project utilizes the following tools and technologies for data analysis and
 - RIGHT(text, num_chars): Extracts a specified number of characters from the right side of a string.
 - MID(text, start_num, num_chars): Extracts a specified number of characters from the middle of a string, starting at a given position.
 - LEN(text): Returns the length (number of characters) of a text string.
+  
  ##### EXAMPLE
+ - In this spreadsheet, the LEFT  Function was used in extracting the departmental code 
+   =LEFT(B10,2)
+- The MID Function was used in extracting the purchase date code
+   =MID(B16,3,6)
+- The RIGHT Function was used in extracting the Asset category code
+   =RIGHT(B16,4)
  ![Text extraction](https://github.com/user-attachments/assets/1b554027-4166-43f7-a477-93fbe841edb1)
+
+![Text extraction 2](https://github.com/user-attachments/assets/3e81a2b2-290a-4880-9d36-08b2ca16997d)
+
+
 
 ----
  3. Finding and Replacing Text
