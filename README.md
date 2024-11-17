@@ -51,10 +51,10 @@ This project utilizes the following tools and technologies for data analysis and
 ----
 #### Number functions in Excel
 1. Basic Numeric Functions
-  - SUM: Adds a range of numbers.: =SUM(A1:A10) sums values from A1 to A10.
-  - AVERAGE: Calculates the mean of a range.: =AVERAGE(A1:A10) returns the average.
-     MIN and MAX: Finds the minimum or maximum value in a range.: =MIN(A1:A10) and =MAX(A1:A10)
-  - COUNT: Counts the number of cells with numbers: =COUNT(A1:A10) returns the count of numeric cells,
+  - SUM: Adds a range of numbers.: `=SUM(A1:A10)` sums values from A1 to A10.
+  - AVERAGE: Calculates the mean of a range.: `=AVERAGE(A1:A10)` returns the average.
+  - MIN and MAX: Finds the minimum or maximum value in a range.: `=MIN(A1:A10) and =MAX(A1:A10)`
+  - COUNT: Counts the number of cells with numbers: `=COUNT(A1:A10)` returns the count of numeric cells,
 ##### EXAMPLE
 ![Basic Excel functions](https://github.com/user-attachments/assets/7d6b7423-a99a-4698-a4dc-b0424fabf529)
 
@@ -77,11 +77,11 @@ This project utilizes the following tools and technologies for data analysis and
    - PROPER(text): Capitalizes the first letter of each word in a text string.
 ##### EXAMPLE
 - In this spreadsheet, PROPER, LOWER, UPPER, TRIM, and PROPER TRIM Function was used in the name extraction
-    - =PROPER(E6)
-    - =LOWER(E6)
-    - =UPPER(E6)
-    - =TRIM(B6)
-    - =PROPER(TRIM(B6))
+    - `=PROPER(E6)`
+    - `=LOWER(E6)`
+    - `=UPPER(E6)`
+    - `=TRIM(B6)`
+    - `=PROPER(TRIM(B6))`
       
 ![Basic cleaning functions](https://github.com/user-attachments/assets/c789a33c-38df-4c73-9a95-80b10a467953)
 
@@ -94,11 +94,11 @@ This project utilizes the following tools and technologies for data analysis and
   
  ##### EXAMPLE
  - In this spreadsheet, the LEFT  Function was used in extracting the departmental code 
-   =LEFT(B10,2)
+   `=LEFT(B10,2)`
 - The MID Function was used in extracting the purchase date code
-   =MID(B16,3,6)
+   `=MID(B16,3,6)`
 - The RIGHT Function was used in extracting the Asset category code
-   =RIGHT(B16,4)
+   `=RIGHT(B16,4)`
   
 ![Text Extration](https://github.com/user-attachments/assets/1da3545b-44c2-4261-865d-c297fb6af12b)
 
@@ -129,13 +129,13 @@ This project utilizes the following tools and technologies for data analysis and
        
 ##### EXAMPLE
 - VLOOKUP practical
-   - Calculation for the basic salary =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)
-   - Calculation for the Housing =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 3, FALSE)
-   - Calculation for the Transport =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 4, FALSE)
-   - Calculation for the Leave =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 5, FALSE)
-   - Calculation for the Meal =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 6, FALSE)
-   - Calculation for the Utility =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 7, FALSE)
-   - Calculation  Gross pay =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)
+   - Calculation for the basic salary `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)`
+   - Calculation for the Housing `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 3, FALSE)`
+   - Calculation for the Transport `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 4, FALSE)`
+   - Calculation for the Leave `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 5, FALSE)`
+   - Calculation for the Meal `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 6, FALSE)`
+   - Calculation for the Utility `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 7, FALSE)`
+   - Calculation  Gross pay `=VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)`
        
 ![Vlookup table](https://github.com/user-attachments/assets/73c9c163-dbd9-45b3-a845-a80b1a030a61)
 
@@ -146,12 +146,73 @@ This project utilizes the following tools and technologies for data analysis and
 - LEFT, RIGHT, MID with SEARCH: Combined to extract variable-length text based on specific markers.
 
  ##### EXAMPLE
- IF Function =IF(J2<20,"LOW",IF(J2<=50,"MEDIUM","HIGH"))
+ IF Function  `=IF(J2<20,"LOW",IF(J2<=50,"MEDIUM","HIGH"))`
  
 ![Conditional text extract](https://github.com/user-attachments/assets/d32b26c3-d80f-4cfe-8950-5fa9c95ccff1)
 
+### DATA VISUALIZATION 
 #### Pivot Tables
 A Pivot Table is used for summarizing, analyzing, and presenting large datasets. It allows you to organize and manipulate data dynamically to extract meaningful insights, such as totals, averages, counts, and comparisons.
  ##### EXAMPLE
  
+ ![Data sheet](https://github.com/user-attachments/assets/a8dbeb2e-227f-4228-8ea1-7c9b5d51088d)
+
+- Region by Revenue
+
+![image](https://github.com/user-attachments/assets/bb296fd1-5340-4083-ba18-43affb93ba03)
+
+- Region by unit sold
+
+![image](https://github.com/user-attachments/assets/38c88a4a-fb3b-4012-a713-2adc6ae50ef3)
+
+- Line of Business by unit sold	
+
+![image](https://github.com/user-attachments/assets/ea2461c4-c77f-4df4-ac7c-e39d764b589f)
+
+- Top 10 stores by Revenue	
+	
+![image](https://github.com/user-attachments/assets/844e1361-e849-4103-9766-f686691e85e7)
+
+- Top 5 Markets by Revenue
+
+![image](https://github.com/user-attachments/assets/846c2a28-e3e1-41b2-80ac-ee8e33ea533f)
+
+- Bottom 5 stores by unit sold
+
+![image](https://github.com/user-attachments/assets/effeeecb-5398-4d42-b7bb-087e3ec89585)
+
+- Region by Average Revenue `=Sheet1!A2:B10+Sheet1!D1:E10+Sheet1!R2:S10`  
+
+![image](https://github.com/user-attachments/assets/057fa8f0-5f2e-4903-ac73-7a42a12c31e6)
+
+- Line of Business by Average unit sold
+
+![image](https://github.com/user-attachments/assets/6375b206-9081-4162-a640-c0be9bedea3e)
+
+- Line of Business by Revenue		
+
+![image](https://github.com/user-attachments/assets/035b0e7d-a10a-4a6c-a45b-da172718c6d2)
+
+- Report of Revenue by month (2014 & 2015)
+
+![image](https://github.com/user-attachments/assets/f0fd4769-c9ba-474a-a2b5-ba0d66c9c434)
+
+#### CHARTS
+- Summary for year 2014
+
+![image](https://github.com/user-attachments/assets/28821610-7c45-4972-846e-c998e4ff771d)
+
+
+![image](https://github.com/user-attachments/assets/8a207848-35c9-4681-aa6c-7ece80ca6a69)
+
+- Summary for year 2015
+
+![image](https://github.com/user-attachments/assets/c92a46d5-d86b-4bd4-9238-4c9a3fcc71be)
+
+
+![image](https://github.com/user-attachments/assets/b82f5c84-c9cb-42a4-9848-6afbee1b211c)
+
+
+
+
 
