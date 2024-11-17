@@ -50,7 +50,7 @@ This project utilizes the following tools and technologies for data analysis and
 
 ----
 #### Number functions in Excel
--Basic Numeric Functions
+1. Basic Numeric Functions
   - SUM: Adds a range of numbers.: =SUM(A1:A10) sums values from A1 to A10.
   - AVERAGE: Calculates the mean of a range.: =AVERAGE(A1:A10) returns the average.
      MIN and MAX: Finds the minimum or maximum value in a range.: =MIN(A1:A10) and =MAX(A1:A10)
@@ -58,10 +58,11 @@ This project utilizes the following tools and technologies for data analysis and
 ##### EXAMPLE
 ![Basic Excel functions](https://github.com/user-attachments/assets/7d6b7423-a99a-4698-a4dc-b0424fabf529)
 
-- Conditional functions
-   - The Excel functions used in calculating for this datasheet is a conditional function: AVERAGEIF, SUMIF, MAXIF, MINIF, COUNTIF.
+2. Conditional functions
+   The Excel functions used in calculating this datasheet are conditional functions: AVERAGEIF, SUMIF, MAXIF, MINIF, and COUNTIF.
    - The calculations are shown in the worksheet
-  #####  EXAMPLE 
+   - 
+  ##### EXAMPLE 
 ![Basic excel function2](https://github.com/user-attachments/assets/a957c2da-65a9-4c38-9b6e-bde81afb9936)
 
 ----
@@ -98,7 +99,8 @@ This project utilizes the following tools and technologies for data analysis and
    =MID(B16,3,6)
 - The RIGHT Function was used in extracting the Asset category code
    =RIGHT(B16,4)
- ![Text extraction](https://github.com/user-attachments/assets/1b554027-4166-43f7-a477-93fbe841edb1)
+  
+![Text Extration](https://github.com/user-attachments/assets/1da3545b-44c2-4261-865d-c297fb6af12b)
 
 ![Text extraction 2](https://github.com/user-attachments/assets/3e81a2b2-290a-4880-9d36-08b2ca16997d)
 
@@ -111,11 +113,45 @@ This project utilizes the following tools and technologies for data analysis and
    REPLACE(old_text, start_num, num_chars, new_text): Replaces part of a text string with a different text string, based on a position and length.
 - SUBSTITUTE(text, old_text, new_text, [instance_num]): Replaces occurrences of specific text within a string.
   
+  ##### EXAMPLE
+  ![Find function](https://github.com/user-attachments/assets/667bfc08-17dd-4cce-8ed5-8bb1665e34d7)
+
 4. Text Concatenation
 - & Operator: Joins (concatenates) multiple text strings.
 - TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...): Joins multiple text values with a specified delimiter.
 - CONCATENATE(text1, [text2], ...): Joins text from different cells or strings. (Note: In newer versions of Excel, CONCATENATE is replaced by CONCAT).
 
-5. Conditional Text Extraction
+5.  Lookup Functions:
+   - VLOOKUP
+       - This is the lookup value.
+       - It refers to the value you want to find in the first column of the lookup range.
+       - The dollar signs ($) indicate an absolute reference, meaning the cell reference won't change when the formula is copied to other cells.
+       
+##### EXAMPLE
+- VLOOKUP practical
+   - Calculation for the basic salary =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)
+   - Calculation for the Housing =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 3, FALSE)
+   - Calculation for the Transport =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 4, FALSE)
+   - Calculation for the Leave =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 5, FALSE)
+   - Calculation for the Meal =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 6, FALSE)
+   - Calculation for the Utility =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 7, FALSE)
+   - Calculation  Gross pay =VLOOKUP($E$9, 'Simple Salary Structure'!$B$8:$I$16, 8, FALSE)
+       
+![Vlookup table](https://github.com/user-attachments/assets/73c9c163-dbd9-45b3-a845-a80b1a030a61)
+
+![Salary structure table](https://github.com/user-attachments/assets/e0d3e929-edae-42c9-bcec-d443c65eedcc)
+
+6. Conditional Text Extraction
 - IF: Conditional functions to clean and handle errors.
-- LEFT, RIGHT, MID with SEARCH: Use in combination to extract variable-length text based on specific markers.
+- LEFT, RIGHT, MID with SEARCH: Combined to extract variable-length text based on specific markers.
+
+ ##### EXAMPLE
+ IF Function =IF(J2<20,"LOW",IF(J2<=50,"MEDIUM","HIGH"))
+ 
+![Conditional text extract](https://github.com/user-attachments/assets/d32b26c3-d80f-4cfe-8950-5fa9c95ccff1)
+
+#### Pivot Tables
+A Pivot Table is used for summarizing, analyzing, and presenting large datasets. It allows you to organize and manipulate data dynamically to extract meaningful insights, such as totals, averages, counts, and comparisons.
+ ##### EXAMPLE
+ 
+
