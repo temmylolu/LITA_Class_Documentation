@@ -209,10 +209,298 @@ A Pivot Table is used for summarizing, analyzing, and presenting large datasets.
 
 ![image](https://github.com/user-attachments/assets/c92a46d5-d86b-4bd4-9238-4c9a3fcc71be)
 
-
 ![image](https://github.com/user-attachments/assets/b82f5c84-c9cb-42a4-9848-6afbee1b211c)
 
 
+### SQL (STRUCTURED QUERY LANGUAGE)
 
 
+---
+
+### **1. Database and Table Creation**
+- **Database**: 
+  - `CREATE DATABASE LITA_DB` initializes a database named `LITA_DB`.
+
+- **Employee Table**: 
+  - `CREATE TABLE Employee` creates a table with employee details like `staffid`, `firstname`, `secondname`, `gender`, etc.
+  - Primary key: `staffid`.
+
+- **Salary Table**: 
+  - `CREATE TABLE Salary` stores salary details including `department` and `salary` with decimal precision.
+
+- **Payment Table**: 
+  - `CREATE TABLE Payment` manages payment details, including `payment_method` with constraints for accepted values.
+
+---
+
+### **2. Data Insertion**
+- Multiple `INSERT INTO` statements populate the `Employee`, `Salary`, and `Payment` tables with sample data.
+
+---
+
+### **3. Basic Queries**
+- Examples include:
+  - **Selection**: `SELECT * FROM Employee` retrieves all employee records.
+  - **Aggregation**: Functions like `SUM`, `AVG`, `MAX`, `MIN`, and `COUNT` are used for total salary, average salary, employee count, etc.
+
+---
+
+### **4. Table Modifications**
+- **Updating data**:
+  - `UPDATE Employee SET secondname = 'Endurance' WHERE staffid = 'AB405'`.
+  - Increment salary by 5% using `SET salary = salary * 1.05`.
+
+- **Adding columns**:
+  - `ALTER TABLE Employee ADD State_of_Origin varchar(50)`.
+
+---
+
+### **5. Joins**
+- **Inner Join**: Combines `Employee` and `Salary` based on matching `staffid`.
+- **Outer Joins**: Includes records even if no match exists (e.g., `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`).
+
+---
+
+### **6. Unions**
+- Combines data from two tables (e.g., `LITA_Store_Lekki` and `LITA_Store_Marina`) while removing duplicates (`UNION`) or retaining duplicates (`UNION ALL`).
+
+---
+
+### **7. Views**
+- **Simple Views**:
+  - `CREATE VIEW vw_Employee_tbl` simplifies frequent queries by selecting specific columns.
+- **Complex Views**:
+  - `vw_lita_employee_info` combines data from `Employee`, `Salary`, and `Payment` tables using joins.
+
+---
+
+### **8. Conditional Logic with `CASE`**
+- Dynamically assigns categories based on conditions:
+  - Example: `CASE` categorizes employees as `Senior Executive`, `Manager`, etc., based on age.
+
+---
+
+### **9. Constraints and Integrity**
+- Includes constraints like `CHECK` for valid `Payment_Method` values.
+- Ensures data integrity through primary keys, default values, and controlled data types.
+
+---
+
+### **10. Advanced Queries**
+- **Filters**:
+  - Range (`BETWEEN`), inclusion (`IN`), and exclusion (`NOT IN`).
+  - Logical conditions with `AND`/`OR`.
+- **Sorting**:
+  - Using `ORDER BY` for ascending/descending order.
+- **Grouping**:
+  - `GROUP BY` organizes data, often used with aggregate functions.
+
+---
+
+### **Summary**
+This SQL script demonstrates the end-to-end lifecycle of database management:
+- Database creation and initialization.
+- Table and data handling with constraints.
+- Aggregations, filters, and conditional logic for analysis.
+- Efficient organization with views and joins.
+
+Here is the information you provided, formatted as SQL queries: 
+
+---
+
+### **Create a Database**
+```sql
+CREATE DATABASE LITA_DB;
+```
+
+---
+
+### **Create Employee Table**
+```sql
+CREATE TABLE Employee (
+    staffid VARCHAR(10) NOT NULL,
+    FirstName VARCHAR(255) NOT NULL,
+    SecondName VARCHAR(255),
+    Gender VARCHAR(10),
+    Date_of_Birth DATE,
+    HireDate DATETIME,
+    PRIMARY KEY (staffid)
+);
+```
+
+---
+
+### **Select Query**
+```sql
+SELECT staffid, firstname FROM Employee;
+```
+
+---
+
+### **Drop Table**
+```sql
+DROP TABLE Employee;
+```
+
+---
+
+### **Delete Command**
+```sql
+DELETE FROM Employee
+WHERE staffid = 'ab281';
+```
+
+---
+
+### **Truncate Table**
+```sql
+TRUNCATE TABLE Employee;
+```
+
+---
+
+### **Create Table with Identity Column**
+```sql
+CREATE TABLE PERSON (
+    personid INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    personname VARCHAR(255) NOT NULL,
+    age INT
+);
+
+INSERT INTO PERSON (personname, age)
+VALUES 
+('saidu', 45),
+('adebanjo', 49),
+('olorunda', 33),
+('martha', 88),
+('sandi', 100),
+('jackson', 22),
+('okunola', 19),
+('esther', 45);
+
+SELECT * FROM PERSON;
+```
+
+---
+
+### **Insert Records into Employee Table**
+```sql
+INSERT INTO Employee (staffid, FirstName, SecondName, Gender, Date_of_Birth, HireDate)
+VALUES
+('AB200', 'ayomide', 'halleluyah', 'female', '1982-10-09', '2018-07-11'),
+('AB405', 'deborah', 'justin', 'female', '1982-10-09', '2018-02-09'),
+('AB282', 'wale', 'olanipekun', 'male', '1982-10-09', '2018-02-09'),
+('AB278', 'shukurat', 'lasisi', 'female', '1982-10-09', '2018-02-09'),
+('AB240', 'johnson', 'mercy', 'female', '1982-10-09', '2019-12-09'),
+('AB299', 'ayomide', 'halleluyah', 'female', '1982-10-09', '2018-07-11'),
+('AB268', 'deborah', 'justin', 'female', '1982-10-09', '2018-02-09'),
+('AB286', 'wale', 'olanipekun', 'male', '1982-10-09', '2018-02-09'),
+('AB270', 'shukurat', 'lasisi', 'female', '1982-10-09', '2018-02-09');
+
+SELECT * FROM Employee;
+```
+
+---
+
+### **Create Salary Table**
+```sql
+CREATE TABLE Salary (
+    salary_id INT IDENTITY(1,1) NOT NULL,
+    Staffid VARCHAR(255),
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    department NVARCHAR(MAX),
+    salary DECIMAL(10, 3) -- 10: Precision, 3: Scale
+);
+```
+
+---
+
+### **Insert Records into Salary Table**
+```sql
+INSERT INTO Salary (staffid, FirstName, lastname, Department, Salary)
+VALUES
+('AB401', 'ayan', 'olakun', 'Information Tech.', 45000.45),
+('AB212', 'okorie', 'mercy', 'Account', 500000.99999),
+('AB223', 'joshua', 'chukwuemeka', 'Human Resources', 100560.9339999),
+('AB234', 'sanni', 'ibrahim', 'Sales and Marketing', 845688.99),
+('AB254', 'mercy', 'olanipekun', 'Account', 8889.999999),
+('AB249', 'johnson', 'mercy', 'Information Tech.', 234000.90909090),
+('AB298', 'ayomide', 'halleluyah', 'Logistics', 678000.991999),
+('AB260', 'deborah', 'justin', 'Logistics', 900099.00697969);
+
+INSERT INTO Salary (staffid, firstname, lastname, department, salary)
+VALUES
+('AB200', 'ayomide', 'halleluyah', 'Human Resources', 45699.8585),
+('AB405', 'deborah', 'justin', 'Account', 898349.900222),
+('AB282', 'wale', 'olanipekun', 'Sales and Marketing', 362636.564848),
+('AB278', 'shukurat', 'lasisi', 'Logistics', 100000.464647),
+('AB240', 'johnson', 'mercy', 'Information Tech', 3855590.9890093),
+('AB299', 'ayomide', 'halleluyah', 'Account', 8585858.9292),
+('AB268', 'deborah', 'justin', 'Human Resources', 76767.93939),
+('AB281', 'wale', 'olanipekun', 'Information Tech', 873093.2344);
+```
+
+---
+
+### **Aggregate Functions**
+```sql
+SELECT SUM(Salary) AS TOTALSALARY FROM Salary;
+SELECT AVG(Salary) AS AVERAGESALARY FROM Salary;
+SELECT COUNT(Staffid) AS EmployeeCount FROM Employee;
+SELECT COUNT(Staffid) AS NumberOfEmployee FROM Salary;
+```
+
+---
+
+### **Update Operations**
+1. **Update Salary**:
+   ```sql
+   UPDATE Salary
+   SET salary = 7056999.9994
+   WHERE Staffid = 'AB401';
+   ```
+
+2. **Update Employee Name**:
+   ```sql
+   UPDATE Employee
+   SET secondname = 'Endurance'
+   WHERE staffid = 'AB405';
+   ```
+
+3. **Update Department**:
+   ```sql
+   UPDATE Salary
+   SET department = 'Information Tech.'
+   WHERE Staffid IN ('AB234', 'AB240');
+   ```
+
+---
+
+### **Add a Column**
+```sql
+ALTER TABLE Employee
+ADD State_of_Origin VARCHAR(50);
+
+UPDATE Employee
+SET State_of_Origin = 'Ekiti'
+WHERE staffid = 'AB268';
+```
+
+---
+## Example
+### **Create Payment Table**
+```sql
+CREATE TABLE Payment (
+    paymentid INT IDENTITY(1,1) PRIMARY KEY,
+    Account_No BIGINT NOT NULL,
+    staffid VARCHAR(30),
+    Bank VARCHAR(255) DEFAULT 'Zenith Bank',
+    Payment_Method VARCHAR(50) CHECK (Payment_Method = 'Cash' OR Payment_Method = 'Transfer')
+);
+```
+
+---
+
+Let me know if you'd like to continue or format specific sections further.
 
