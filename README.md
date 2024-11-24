@@ -304,8 +304,6 @@ This SQL script demonstrates the end-to-end lifecycle of database management:
 - Aggregations, filters, and conditional logic for analysis.
 - Efficient organization with views and joins.
 
-Here is the information you provided, formatted as SQL queries: 
-
 ---
 
 ### **Create a Database**
